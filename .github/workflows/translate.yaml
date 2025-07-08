@@ -1,0 +1,24 @@
+name: Translate
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  test-unit:
+    name: unit
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: neetlab/deepl-action@main
+        with:
+          deepl-auth-key: ${{ secrets.DEEPL_AUTH_KEY }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          source-file: ja.json
+          source-lang: JA
+          target-file: en.json
+          target-lang: EN
