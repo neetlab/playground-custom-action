@@ -1,4 +1,6 @@
 {
   "title": "Hello. - Hello.",
-  "description": "This is a file written in Japanese for testing purposes"
+  "user_name": "username",
+  "about": "This service is an application to share cooking recipes. Register an account to use it more conveniently!",
+  "sign_up": "Register Now"
 }
